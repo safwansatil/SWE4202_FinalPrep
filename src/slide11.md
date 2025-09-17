@@ -56,10 +56,10 @@ there can be try-finally block without catch block but not vice-versa.
 
 ### Advantage of Exception Handling
 <ol>
-    <li>Maintains Normal Flow of Application</li>
-    <li>Seperation of error-handling code from regular code : "what we want to do" vs "what we need to do when things go wrong"</li>
-    <li>Grouping and differentiating error types: different exceptions can be handled differently</li>
-    <li>Propagation of Errors</li>
+    <li><b>Maintains Normal Flow of Application:</b> Without exception handling, an error would abruptly terminate the program. By catching exceptions, you can handle the error gracefully and allow the application to continue running or shut down in a controlled manner.</li>
+    <li><b>Separation of Error-Handling Code:</b> Exception handling separates the main logic of your code (in the <code>try</code> block) from the error-handling logic (in <code>catch</code> blocks). This makes the code cleaner, more readable, and easier to maintain.</li>
+    <li><b>Grouping and Differentiating Error Types:</b> You can use multiple <code>catch</code> blocks to handle different types of exceptions specifically. This allows you to take different recovery actions based on the specific error that occurred, such as retrying an operation for a temporary network failure versus logging a fatal error.</li>
+    <li><b>Propagation of Errors:</b> If a method encounters an error it cannot handle, it can "throw" the exception up the call stack to its caller. This allows exceptions to be handled at a more appropriate level in the application where there might be more context to deal with the problem.</li>
 </ol>
 
 <br>

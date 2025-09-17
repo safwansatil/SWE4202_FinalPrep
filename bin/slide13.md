@@ -9,6 +9,16 @@ Streams can be:
 - **Character-Based Streams** (Text Data) : <br> Works with characters. (16 bit unicode). For reading/writing text files. 
     Example *FileReader*, *FileWriter*
 
+
+The three standard streams in Java are:
+
+- System.in - The standard input stream used for reading data (typically from the keyboard)
+
+- System.out - The standard output stream used for writing normal data (typically to the console)
+
+- System.err - The standard error stream used for writing error messages (typically to the console)
+
+
 ## Back to files
 A file is a named location that can be used to store related information.
 A directory is a collection of files and subdirectories.
