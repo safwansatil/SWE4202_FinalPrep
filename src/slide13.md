@@ -59,7 +59,7 @@ class Main {
       }
     }
     catch(Exception e) {
-      e.getStackTrace();
+      e.printStackTrace();
     }
   
 ```
@@ -145,7 +145,7 @@ class Main {
       System.out.println("The File is deleted.");
     }
     else {
-      System.out.println("The File is not deleted.");
+      System.out.println("The File does not exist.");
     }
   }
 }

@@ -1,7 +1,7 @@
-import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.*;
 
 public class SwingForm {
 
@@ -45,10 +45,22 @@ public class SwingForm {
         gbc.gridy = 1;
         panel.add(emailField, gbc);
 
+        // --- Password Row ---
+        JLabel passwordLabel = new JLabel("Password:");
+        gbc.gridx = 0;
+        gbc.gridy = 2;
+        gbc.anchor = GridBagConstraints.LINE_END;
+        panel.add(passwordLabel, gbc);
+
+        JPasswordField passwordField = new JPasswordField(20);
+        gbc.gridx = 1;
+        gbc.gridy = 2;
+        panel.add(passwordField, gbc);
+
         // --- Submit Button ---
         JButton submitButton = new JButton("Submit");
         gbc.gridx = 1;
-        gbc.gridy = 2;
+        gbc.gridy = 3;
         gbc.anchor = GridBagConstraints.LINE_START;
         panel.add(submitButton, gbc);
 
@@ -58,12 +70,13 @@ public class SwingForm {
             public void actionPerformed(ActionEvent e) {
                 String name = nameField.getText();
                 String email = emailField.getText();
+                String password = new String(passwordField.getPassword());
                 
                 // Display the input in a dialog box
-                JOptionPane.showMessageDialog(frame,
-                        "Name: " + name + "\nEmail: " + email,
-                        "Form Submission",
-                        JOptionPane.INFORMATION_MESSAGE);
+                JOptionPane.showMessageDialog(null,
+                        "Name: " + name + "\nEmail: " + email + "\nPassword: " + password,
+                        "Form Submission", JOptionPane.INFORMATION_MESSAGE
+                        );
             }
         });
 

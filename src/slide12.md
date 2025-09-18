@@ -49,5 +49,28 @@ BoxLayout: Arranges components in a single row or column
 
 ### Event Handling Approaches 
 - **Using an Anonymous Inner Class**: This is a common and concise approach where you define the listener right where you add it to a component. It's best for simple, component-specific actions because the handling code is kept close to the source.
+```java
+button.addActionListener(new ActionListener() {
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        // Handle button click
+    }
+});
+```
 - **Implementing a Listener in the Main Class**: The main GUI class itself can implement a listener interface (like `ActionListener`). This is useful when multiple components trigger the same logic or when the event handling logic is complex and needs access to many parts of the main class.
+```java 
+public class MyFrame extends JFrame implements ActionListener {
+    private JButton button;
 
+    public MyFrame() {
+        button = new JButton("Click Me");
+        button.addActionListener(this);
+        add(button);
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        // Handle button click
+    }
+}
+```

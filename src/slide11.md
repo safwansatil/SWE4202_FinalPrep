@@ -3,6 +3,10 @@ Exceptions are **unwanted bugs or events** that occur during the execution of a 
     For example, IOException, ArithmeticException, NullPointerException, ClassNotFoundException, etc.
 
 NullPointerException occurs when a program **attempts to use an object reference that has not been initialized** (i.e., it points to null). In Java, NullPointerException is a common runtime exception that indicates this specific error.
+IOException occurs when there is an **input or output failure** during the execution of a program. It is a checked exception that is thrown when an I/O operation fails or is interrupted.
+ArithmeticException occurs when an exceptional arithmetic condition has occurred. For example, an integer "divide by zero" throws an instance of this class.
+ClassNotFoundException occurs when an application tries to load a class through its string name using methods like `Class.forName()` or `ClassLoader.loadClass()`, and the class cannot be found in the classpath. It indicates that the class definition is missing or not accessible.
+
 
 
 - In Java, when an exception is thrown, it propagates up the call stack until it is caught by a catch block.
