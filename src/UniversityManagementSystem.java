@@ -1,4 +1,3 @@
-// This is for uml understanding and relationships betweem classes
 import java.util.ArrayList;
 import java.util.List;
 
